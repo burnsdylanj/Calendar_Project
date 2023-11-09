@@ -1,6 +1,8 @@
 # Calendar_Project
 Calendar project for CS
 
+Weekly Update files will be created for each person so they can add their notes about what they did for the week. Your name will be put in the file name for simplicity.
+
 Camryn is doing CSS files
 Marcelo is working with Dylan on JS files
 Jay is working on HTML files
