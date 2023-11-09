@@ -17,5 +17,16 @@ Step 3:
 
 Make it look pretty
 
-11/5 - I haven't touched anything with this during the weekend as I am trying to catch up in math. Feel free to work on it if you want but don't feel too much pressure.
-Maybe just look around for resources or guides on how to do things you want to do for the project. Feel free to ask any questions and I'll see you on Tuesday!
+Overview and ideas for the project:
+
+Similar in design to Google calendar. Making a one month calendar so that we can have it working as a base and then making the rest of the year
+and maybe future years after that. 
+
+The idea is to have a calendar that can store information for daily events and times. 
+
+---If we feel like being AMBITIOUS---
+
+If given enough time the hope is that the calendar may be able to show the information for each day displayed on the day's tab. Another idea could be to have a calendar that, when the day is clicked on, displays an hour by hour list like the calendar on the iPhone.
+
+
+---If we feel like being AMBITIOUS---
