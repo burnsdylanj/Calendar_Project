@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        .calendar {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .event-section {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .event-input {
+            width: 100%;
+            margin-top: 10px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .save-button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calendar">
+        <h2>Calendar</h2>
+        <input type="date" id="eventDate">
+    </div>
+
+    <div class="event-section">
+        <h2>Event Section</h2>
+        <textarea class="event-input" placeholder="Enter event details"></textarea>
+        <button class="save-button" onclick="saveEvent()">Save Event</button>
+    </div>
+
+    <script>
+        function saveEvent() {
+            const eventDate = document.getElementById('eventDate').value;
+            const eventDetails = document.querySelector('.event-input').value.trim();
+
+            if (eventDate && eventDetails !== '') {
+                // You can send the event data to the server or perform further processing.
+                // For now, let's just log it to the console.
+                console.log(`Date: ${eventDate}, Event: ${eventDetails}`);
+
+                // Optionally, you can display a confirmation message.
+                alert('Event saved!');
+            } else {
+                alert('Please select a date and enter event details.');
+            }
+        }
+    </script>
+
+</body>
+</html>
