@@ -91,5 +91,50 @@
             <td>30</td>
             <td>31</td>
         </tr>
-            
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const calendar = document.querySelector("table");
+
+        const days = document.querySelectorAll("td");
+        days.forEach((day, index) => {
+            day.addEventListener("click", function () {
+                const eventText = prompt("Enter event for " + (index + 1) + ":", "");
+                if (eventText !== null) {
+                    const eventTime = prompt("Enter event time for " + (index + 1) + " (e.g., 2:00 PM):", "");
+                    if (eventTime !== null) {
+                        storeEvent(index + 1, eventText, eventTime);
+                        updateCalendar();
+                    }
+                }
+            });
+        });
+
+        function storeEvent(date, eventText, eventTime) {
+            const events = JSON.parse(localStorage.getItem("events")) || {};
+            events[date] = { text: eventText, time: eventTime };
+            localStorage.setItem("events", JSON.stringify(events));
+        }
+
+        function updateCalendar() {
+            const events = JSON.parse(localStorage.getItem("events")) || {};
+            days.forEach((day, index) => {
+                const date = index + 1;
+                const event = events[date];
+
+                if (event) {
+                    day.innerHTML = `${date}<br><span style="color: blue;">${event.text}<br>${event.time}</span>`;
+                } else {
+                    day.innerHTML = date;
+                }
+            });
+        }
+
+        updateCalendar();
+    });
+</script>
+
+</body>
 </html>
