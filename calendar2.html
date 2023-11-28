@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td {
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>January 2024</h2>
+<button name="Next" onclick="nextMonth()">Next</button>
+
+<table>
+    <thead>
+        <tr>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>23</td>
+            <td>24</td>
+            <td>25</td>
+            <td>26</td>
+            <td>27</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>29</td>
+            <td>30</td>
+            <td>31</td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const calendar = document.querySelector("table");
+
+        const days = document.querySelectorAll("td");
+        days.forEach((day, index) => {
+            day.addEventListener("click", function () {
+                const eventText = prompt("Enter event for " + (index + 1) + ":", "");
+                if (eventText !== null) {
+                    const eventTime = prompt("Enter event time for " + (index + 1) + " (e.g., 2:00 PM):", "");
+                    if (eventTime !== null) {
+                        storeEvent(index + 1, eventText, eventTime);
+                        updateCalendar();
+                    }
+                }
+            });
+        });
+
+        function storeEvent(date, eventText, eventTime) {
+            const events = JSON.parse(localStorage.getItem("events")) || {};
+            events[date] = { text: eventText, time: eventTime };
+            localStorage.setItem("events", JSON.stringify(events));
+        }
+
+        function updateCalendar() {
+            const events = JSON.parse(localStorage.getItem("events")) || {};
+            days.forEach((day, index) => {
+                const date = index + 1;
+                const event = events[date];
+
+                if (event) {
+                    day.innerHTML = `${date}<br><span style="color: blue;">${event.text}<br>${event.time}</span>`;
+                } else {
+                    day.innerHTML = date;
+                }
+            });
+        }
+
+        updateCalendar();
+    });
+</script>
+
+</body>
+</html>
