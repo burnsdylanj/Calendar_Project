@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calender</title>
+    <title>Calendar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -14,6 +14,7 @@
             border-collapse: collapse;
             margin-top: 20px;
         }
+
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
@@ -32,9 +33,7 @@
 <body>
 
 <h2>January 2024</h2>
-
-<button name="AddEvent" onClick="Hour By Hour.HTML">AddEvent</button>
-<button name= "Next" onClick= "location.href= 'February.HTML'">Next</button>
+<button name="Next" onclick="nextMonth()">Next</button>
 
 <table>
     <thead>
