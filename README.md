@@ -1,9 +1,13 @@
 # Calendar_Project
 Calendar project for CS
 
+<<<<<<< Updated upstream
 Weekly Update files will be created for each person so they can add their notes about what they did for the week. Your name will be put in the file name for simplicity.
 
 Camryn is doing CSS files
+=======
+Camryn is doing CSS files 
+>>>>>>> Stashed changes
 Marcelo is working with Dylan on JS files
 Jay is working on HTML files
 
@@ -19,6 +23,7 @@ Step 3:
 
 Make it look pretty
 
+<<<<<<< Updated upstream
 Overview and ideas for the project:
 
 Similar in design to Google calendar. Making a one month calendar so that we can have it working as a base and then making the rest of the year
@@ -32,3 +37,6 @@ If given enough time the hope is that the calendar may be able to show the infor
 
 
 ---If we feel like being AMBITIOUS---
+=======
+index.css
+>>>>>>> Stashed changes
