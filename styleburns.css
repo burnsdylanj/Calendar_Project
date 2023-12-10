@@ -1,0 +1,119 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fff5e6; 
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  background-color: #ffeedd; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navigation {
+  background-color: #f9a825; 
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.navigation:hover {
+  background-color: #ffb300;
+}
+
+#month {
+  font-size: 24px;
+  color: #5f4b3d; 
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+}
+
+.day {
+  background-color: #fffaf0; 
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+.day-text {
+  font-weight: bold;
+  color: #5f4b3d;
+}
+
+.day-number {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.event-name {
+  color: #d84315;
+  font-size: 14px;
+}
+
+button {
+  background-color: #f9a825;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+button:hover {
+  background-color: #ffb300;
+}
+
+input[type="text"], input[type="date"] {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#addEventButton {
+  padding: 10px;
+  font-weight: bold;
+  width: 200px; 
+  display: block; 
+  margin-bottom: 20px; 
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  align-items: center;
+}
+
+.previousMonth, .nextMonth {
+  padding: 10px 15px;
+  min-width: 50px; 
+  text-align: center;
+}
+
+#month {
+  flex-grow: 1;
+  text-align: center;
+}
