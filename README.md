@@ -1,3 +1,11 @@
+12/10/2023 UPDATE:
+
+I apologize for not reaching out prior to this but I have obviously been away from class and it was due to my car issues. I am not sure if you guys made another github repository or not but if you haven't I just decided to make my own calednar. I tried making changes to the calendar that we had all been working on but due to being out of class I got lost in the changes that were made and I did not know how to help. Please feel free to change anything or make adjustments to the calendar I made (my name is in the file name for all the sections of it). If I do not hear anything I will see you all on Wednesday morning.
+
+
+
+
+
 # Calendar_Project
 Calendar project for CS
 
